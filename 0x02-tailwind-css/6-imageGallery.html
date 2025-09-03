@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid and Flexbox Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @media (max-width: 768px) {
+        main {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body class="p-4">
+    <header class="bg-blue-500 text-white p-4">
+      <h1 class="text-3xl">Grid and Flexbox Layout</h1>
+    </header>
+
+    <main>
+      <section class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4 min-h-screen">
+        <section class="lg:col-span-2 flex">
+          <div class="w-1/2 bg-red-200">Flexbox Item 1</div>
+          <div class="w-1/2 bg-red-400">Flexbox Item 2</div>
+        </section>
+        <aside class="lg:col-span-1 bg-green-200 p-4">Sidebar</aside>
+      </section>
+
+      <!-- Image Gallery -->
+      <section class="grid grid-cols-1">
+        <h3 class="text-center text-2xl p-4">Image Gallery</h3>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full">
+          <img
+            src="./src/assets/allison-saeng-Y_mNCKscZC4-unsplash.jpg"
+            alt="lab measuring tubes"
+            class="lg:col-span-1 w-full block p-4"
+          />
+          <img
+            src="./src/assets/matt-boitor-m6HrckD4yxw-unsplash.jpg"
+            alt="people having fun at the beach"
+            class="lg:col-span-1 w-full block p-4"
+          />
+          <img
+            src="./src/assets/mike-hindle-SZW3-zZUgss-unsplash.jpg"
+            alt="black glass windows of 4 story building"
+            class="lg:col-span-1 w-full block p-4"
+          />
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full">
+          <img
+            src="./src/assets/qingyu-MgQKkfo8fp0-unsplash.jpg"
+            alt="a boutique with the dressing showing through a brown glass"
+            class="lg:col-span-1 w-full block p-4"
+          />
+          <img
+            src="./src/assets/yue-ma-pk7V1eW6VI8-unsplash.jpg"
+            alt="glass design"
+            class="lg:col-span-1 w-full block p-4"
+          />
+          <img
+            src="./src/assets/shubham-dhage-G14M8ddVBcs-unsplash.jpg"
+            alt="flowers"
+            class="lg:col-span-1 w-full block p-4"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-4 mt-4">
+      <p>&copy; 2024 John Doe's Blog</p>
+    </footer>
+  </body>
+</html>
