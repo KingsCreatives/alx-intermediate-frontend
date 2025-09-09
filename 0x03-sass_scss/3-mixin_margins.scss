@@ -1,18 +1,14 @@
-@mixin body-margin {
-    margin-left: 10px;
-    margin-right: 10px;
+@mixin margin-left-and-right($margin-value) {
+margin-left: $margin-value;
+margin-right: $margin-value;
 }
 
-@mixin div-margin{
-    margin-left: 15px;
-    margin-right: 15px;
-}
 
 body {
-    @include body-margin;
+    @include margin-left-and-right(10px);
 }
 
 div {
-    @include div-margin;
+    @include margin-left-and-right(15px);
 }
 
